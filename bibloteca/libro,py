@@ -1,0 +1,18 @@
+# libro.py
+from typing import List
+from copia import Copia
+
+class Libro:
+    def __init__(self, isbn: str, titulo: str, autor: str):
+        self.isbn = isbn
+        self.titulo = titulo
+        self.autor = autor
+        self.copias: List[Copia] = []
+
+    def agregar_copia(self, idCopia: str, ubicacion: str) -> Copia:
+        copia = Copia(idCopia, self, ubicacion)
+        self.copias.append(copia)
+        return copia
+
+    def obtener_disponibles(self) -> List[Copia]:
+        return [copia for copia in self.copias if copia.disponible]
