@@ -35,4 +35,4 @@ class GestorNotificaciones:
 # Uso
 gestor = GestorNotificaciones(NotificadorWhatsApp())
 gestor.notificar_usuario("Hola, tu pedido ha sido enviado.")
-# Resultado : Enviando WhatsApp: Hola, tu pedido ha sido enviado.
+# Resultado : Enviando WhatsApp: Hola, tu pedido ha sido enviado xd.
